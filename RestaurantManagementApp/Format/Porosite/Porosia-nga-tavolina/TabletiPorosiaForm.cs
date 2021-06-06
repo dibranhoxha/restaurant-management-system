@@ -229,5 +229,10 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         {
 
         }
+
+        private void gunaPictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

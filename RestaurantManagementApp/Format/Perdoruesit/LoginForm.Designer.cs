@@ -92,10 +92,12 @@
             // guna2CheckBox1
             // 
             this.guna2CheckBox1.AutoSize = true;
+            this.guna2CheckBox1.Checked = true;
             this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.CheckedState.BorderRadius = 2;
             this.guna2CheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.guna2CheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CheckBox1.Location = new System.Drawing.Point(719, 315);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
@@ -119,7 +121,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            //this.guna2PictureBox1.Image = global::RestaurantManagementApp.Properties.Resources.pexels_quang_nguyen_vinh_2159065;
             this.guna2PictureBox1.Location = new System.Drawing.Point(-301, 15);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -147,9 +149,7 @@
             this.fjalekalimiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
             this.fjalekalimiTextBox.HoverState.BorderColor = System.Drawing.Color.White;
             this.fjalekalimiTextBox.HoverState.Parent = this.fjalekalimiTextBox;
-            this.fjalekalimiTextBox.IconLeft = ((System.Drawing.Image)(resources.GetObject("fjalekalimiTextBox.IconLeft")));
             this.fjalekalimiTextBox.IconLeftOffset = new System.Drawing.Point(12, 0);
-            this.fjalekalimiTextBox.IconRight = ((System.Drawing.Image)(resources.GetObject("fjalekalimiTextBox.IconRight")));
             this.fjalekalimiTextBox.IconRightOffset = new System.Drawing.Point(12, 0);
             this.fjalekalimiTextBox.Location = new System.Drawing.Point(576, 244);
             this.fjalekalimiTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

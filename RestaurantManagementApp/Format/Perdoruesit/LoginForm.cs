@@ -28,8 +28,30 @@ namespace RestaurantManagementApp.Format.Perdoruesit
                 MessageBox.Show(mesazhi);
                 Hide();
 
-                Form1 AdminHome = new Form1();
-                AdminHome.Show();
+
+                if (PerdoruesiAktiv.Autorizohet("Tavolina"))
+                {
+                    TavolinaPorosise.Id = Convert.ToInt32(PerdoruesiAktiv.username);
+                    //get tavolina's disponueshmeria and nr-karrikave
+                    Format.Porosite.Porosia_nga_tavolina.TabletiPorosiaForm tpf = new Porosite.Porosia_nga_tavolina.TabletiPorosiaForm();
+                    tpf.Show();
+                }
+                else if (PerdoruesiAktiv.Autorizohet("Stafi Sherbyes"))
+                {
+
+                }
+                else if (PerdoruesiAktiv.Autorizohet("Stafi Kuzhines"))
+                {
+                    Form1 AdminHome = new Form1();
+                    AdminHome.Show();
+                }
+                else if (PerdoruesiAktiv.Autorizohet("Administrator"))
+                {
+                    Form1 AdminHome = new Form1();
+                    AdminHome.Show();
+                }
+
+                
             }
             else
             {

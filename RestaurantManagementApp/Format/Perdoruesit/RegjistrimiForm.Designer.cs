@@ -217,8 +217,9 @@
             this.roliComboBox.ItemHeight = 30;
             this.roliComboBox.Items.AddRange(new object[] {
             "Administrator",
-            "Staf Sherbyes",
-            "Staf i Kuzhines"});
+            "Stafi Sherbyes",
+            "Stafi Kuzhines",
+            "Tavolina"});
             this.roliComboBox.ItemsAppearance.Parent = this.roliComboBox;
             this.roliComboBox.Location = new System.Drawing.Point(205, 338);
             this.roliComboBox.Name = "roliComboBox";

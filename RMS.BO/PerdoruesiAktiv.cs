@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RMS.BO
 {
-    public class PerdoruesiAktiv
+    public static class PerdoruesiAktiv
     {
         public static bool LoggedIn { get; set; }
         public static int Id { get; set; }

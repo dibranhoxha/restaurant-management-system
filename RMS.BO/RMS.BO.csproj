@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rezervimi.cs" />
     <Compile Include="Tavolina.cs" />
+    <Compile Include="TavolinaPorosise.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
