@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.Lib;
+using RMS.BLL;
+using RMS.BO;
+
 
 namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
 {
     public partial class TabletiPorosiaForm : Form
     {
-        public List<ProduktiPictureBox> liscollection;
+        PorosiaBLL porosiaBLL = new PorosiaBLL();
+        public List<ProduktiPictureBox> liscollection =  new List<ProduktiPictureBox>();
         public List<ProduktiUserControl> liscollection2;
         public TabletiPorosiaForm()
         {
@@ -52,17 +56,16 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
             }
 
 
-            //TODO: put this in a function
             Bitmap MyImage = new Bitmap(@"C:\Users\L\Downloads\pizza-pizza-filled-with-tomatoes-salami-olives.jpg");
 
-            liscollection = new List<ProduktiPictureBox>();
-            for (int i = 0; i < 100; i++)
+            ProduktetBLL produktetBLL = new ProduktetBLL();
+            List<Produkti> produktet = produktetBLL.GetProduktet();
+            foreach (var item in produktet)
             {
-
                 ProduktiPictureBox p = new ProduktiPictureBox();
-                p.Emri = i.ToString();
-                p.ProduktiID = i;
-                p.Cmimi = i;
+                p.Emri = item.Emri;
+                p.ProduktiID = item.ProduktID;
+                p.Cmimi = item.Cmimi;
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
                 p.ClientSize = new Size(138, 108);
                 p.Image = (Image)MyImage;
@@ -83,24 +86,41 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         {
             Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flowLayoutPanel2, gunaVScrollBar1, true);
             Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper2 = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flowLayoutPanel1, gunaVScrollBar2, true);
-            //Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper3 = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flowLayoutPanel3, sb, true);
         }
-
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
-            // int PorosiID = usp_RegjistroPorosine(TavolinaID);
+            
+            RMS.BO.Porosia porosia = new RMS.BO.Porosia();
+            porosia.DataEPorosise = DateTime.Now;
+            int PorosiID = porosiaBLL.ShtoPorosi(porosia);
+            
+            string msg = "Porosia Id - " + PorosiID.ToString() + "\r\n";
+
             foreach (UserControl us in flowLayoutPanel1.Controls)
             {
                 ProduktiPictureBox pbox = us.Controls.OfType<ProduktiPictureBox>().First();
+                ProduktiUserControl pr = us.Controls.OfType<ProduktiUserControl>().First();
+                
 
                 Guna.UI.WinForms.GunaNumeric nup = (Guna.UI.WinForms.GunaNumeric)us.Controls.Find("gunaNumeric1", true)[0];
-                MessageBox.Show(nup.Value.ToString());
                 for (int i = 0; i < nup.Value; i++)
                 {
-                    // usp_RegjistroProduktin(PorosiID, kontrollerat[0].ProduktiID)
-                    MessageBox.Show((i + 1) + " -- " + pbox.Emri);
+                    msg += pbox.Emri + ", Cmimi - " + pbox.Cmimi + "\r\n";
                 }
             }
+            foreach (UserControl us in flowLayoutPanel1.Controls)
+            {
+                ProduktiPictureBox pbox = us.Controls.OfType<ProduktiPictureBox>().First();
+                ProduktiUserControl pr = us.Controls.OfType<ProduktiUserControl>().First();
+
+                pbox.CheckToggle();
+                pr.Controls.Add(pbox);
+                flowLayoutPanel2.Controls.Add(pr);
+            }
+            gunaLabel8.Text = "";
+            gunaLabel6.Text = "";
+            flowLayoutPanel1.Controls.Clear();
+            MessageBox.Show(msg);
         }
 
         private ProduktiUserControl Produkti_UserControl(ProduktiPictureBox p)
@@ -108,16 +128,16 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
             ProduktiUserControl pr = new ProduktiUserControl();
             pr.Controls.Add(p);
             pr.Margin = new Padding(40, 10, 0, 40);
-            pr.txtbox.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ";
+            pr.txtbox.Text = p.Emri;
             p.MouseHover += (thesender, thee) =>
             {
-                pr.txtbox.Font = new Font("Century Gothic", 10, FontStyle.Italic);
+                pr.txtbox.Font = new Font("Century Gothic", 11, FontStyle.Italic);
                 pr.txtbox.ForeColor = Color.Navy;
             };
             p.MouseLeave += (thesender, thee) =>
             {
                 pr.txtbox.ForeColor = Color.Black;
-                pr.txtbox.Font = new Font("Century Gothic", 10);
+                pr.txtbox.Font = new Font("Century Gothic", 11);
             };
 
             p.Click += (sender, e) =>
@@ -128,6 +148,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 {
                     ProduktiZgjedhurUserControl us = new ProduktiZgjedhurUserControl();
                     us.Controls.Add(p);
+                    us.Controls.Add(pr);
                     us.lblId = p.ProduktiID.ToString();
                     us.lblEmri = p.Emri;
                     us.lblCmimi = (us.nup.Value * p.Cmimi).ToString();
@@ -141,17 +162,13 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                         flowLayoutPanel1.Controls.Remove(us);
                         pr.Controls.Add(p);
                         flowLayoutPanel2.Controls.Add(pr);
+                        kalkulo_totalin();
                     };
                     us.nup.ValueChanged += (thesender, thee) =>
                     {
-                        double cmimi = us.nup.Value * p.Cmimi;
+                        decimal cmimi = us.nup.Value * p.Cmimi;
                         us.lblCmimi = cmimi.ToString();
-                        double subtotal = kalkulo_subtotalin();
-                        double perqindja = 0.19;
-                        double taksa = subtotal * perqindja;
-                        double total = subtotal + taksa;
-                        gunaLabel8.Text = subtotal.ToString();
-                        gunaLabel6.Text = total.ToString();
+                        kalkulo_totalin();
                     };
                     flowLayoutPanel2.Controls.Remove(pr);
                     flowLayoutPanel1.Controls.Add(us);
@@ -168,20 +185,22 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
 
         }
 
-        private double kalkulo_subtotalin()
+        private void kalkulo_totalin()
         {
-            double subtotal = 0;
+            decimal subtotal = 0;
+            
             foreach (ProduktiZgjedhurUserControl us in flowLayoutPanel1.Controls)
             {
                 ProduktiPictureBox p = us.Controls.OfType<ProduktiPictureBox>().First();
                 subtotal += us.nup.Value * p.Cmimi;
             }
-            return subtotal;
-        }
-
-        private void gunaVScrollBar2_Scroll(object sender, ScrollEventArgs e)
-        {
-
+            decimal bakshishi = subtotal * guna2TrackBar1.Value/100;
+            subtotal = subtotal + bakshishi;
+            decimal perqindja = 0.16m;
+            decimal taksa = subtotal * perqindja;
+            decimal total = subtotal + taksa;
+            gunaLabel8.Text = subtotal.ToString();
+            gunaLabel6.Text = total.ToString();
         }
 
         private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
@@ -224,15 +243,12 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 }
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
         {
+            gunaLabel9.Text = guna2TrackBar1.Value.ToString() + "%";
 
+            kalkulo_totalin();
         }
 
-        private void gunaPictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -66,17 +66,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 29);
+            this.label1.Location = new System.Drawing.Point(49, 29);
+            this.label1.MaximumSize = new System.Drawing.Size(157, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 5;
@@ -86,7 +88,7 @@
             this.gunaLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.749999F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel3.Location = new System.Drawing.Point(311, 27);
+            this.gunaLabel3.Location = new System.Drawing.Point(289, 27);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(0, 15);
             this.gunaLabel3.TabIndex = 4;
@@ -101,7 +103,7 @@
             this.gunaNumeric1.ButtonForeColor = System.Drawing.Color.White;
             this.gunaNumeric1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.gunaNumeric1.ForeColor = System.Drawing.Color.Black;
-            this.gunaNumeric1.Location = new System.Drawing.Point(235, 19);
+            this.gunaNumeric1.Location = new System.Drawing.Point(213, 19);
             this.gunaNumeric1.Maximum = ((long)(9999999));
             this.gunaNumeric1.Minimum = ((long)(0));
             this.gunaNumeric1.Name = "gunaNumeric1";
@@ -111,12 +113,12 @@
             this.gunaNumeric1.Text = "gunaNumeric1";
             this.gunaNumeric1.Value = ((long)(0));
             // 
-            // UserControl2
+            // ProduktiZgjedhurUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaLinePanel1);
-            this.Name = "UserControl2";
+            this.Name = "ProduktiZgjedhurUserControl";
             this.Size = new System.Drawing.Size(349, 73);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();

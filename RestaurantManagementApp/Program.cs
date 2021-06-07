@@ -16,7 +16,7 @@ namespace RestaurantManagementApp
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Format.Perdoruesit.LoginForm());
+            Application.Run(new Format.Porosite.Porosia_nga_tavolina.TabletiPorosiaForm());
 		}
 	}
 }

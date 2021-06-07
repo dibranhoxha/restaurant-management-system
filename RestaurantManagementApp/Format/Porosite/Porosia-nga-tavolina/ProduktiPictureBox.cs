@@ -12,7 +12,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
 
         public string Emri { get; set; }
 
-        public int Cmimi { get; set; }
+        public decimal Cmimi { get; set; }
 
         public CheckState CheckState { get; set; } = CheckState.Unchecked;
 

@@ -25,5 +25,11 @@ namespace RMS.BO
             this.Madhesia = madhesia;
             this.Cmimi = cmimi;
         }
+        public Produkti(int produktID, string emri, decimal cmimi)
+        {
+            this.ProduktID = produktID;
+            this.Emri = emri;
+            this.Cmimi = cmimi;
+        }
     }
 }

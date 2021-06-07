@@ -226,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\2750635_gray-circle-login-user-icon-png-transparent-png.jpg" />
+    <None Include="Resources\usernameTextBox.IconLeft.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\serving-dish.png" />
     <None Include="Resources\lock.png" />

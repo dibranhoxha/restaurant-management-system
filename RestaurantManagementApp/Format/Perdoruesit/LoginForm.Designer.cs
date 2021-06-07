@@ -121,7 +121,6 @@
             // 
             // guna2PictureBox1
             // 
-            //this.guna2PictureBox1.Image = global::RestaurantManagementApp.Properties.Resources.pexels_quang_nguyen_vinh_2159065;
             this.guna2PictureBox1.Location = new System.Drawing.Point(-301, 15);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -270,7 +269,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.Location = new System.Drawing.Point(1010, 31);
+            this.guna2Panel2.Location = new System.Drawing.Point(1010, 29);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(5, 492);
@@ -319,7 +318,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm1";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -59,9 +59,6 @@ namespace RestaurantManagementApp.Format.Perdoruesit
             }
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

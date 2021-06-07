@@ -10,6 +10,7 @@ namespace RMS.BO
     {
         public int PorosiaID { get; set; }
         public int TavolinaID { get; set; }
+        public int SherbyesiID { get; set; }
         public DateTime DataEPorosise { get; set; }
         public int InsertBy { get; set; }
         public DateTime InsertDate { get; set; }

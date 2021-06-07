@@ -27,6 +27,11 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         {
             pictureBox1.BackColor = Color.White;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
