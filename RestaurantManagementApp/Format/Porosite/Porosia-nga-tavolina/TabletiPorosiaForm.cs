@@ -56,7 +56,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
             }
 
 
-            Bitmap MyImage = new Bitmap(@"C:\Users\L\Downloads\pizza-pizza-filled-with-tomatoes-salami-olives.jpg");
+            Bitmap MyImage = new Bitmap(@"C:\Users\Rra\Downloads\191115120957-immigrant-food-columbia-road.jpg");
 
             ProduktetBLL produktetBLL = new ProduktetBLL();
             List<Produkti> produktet = produktetBLL.GetProduktet();
@@ -67,7 +67,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 p.ProduktiID = item.ProduktID;
                 p.Cmimi = item.Cmimi;
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
-                p.ClientSize = new Size(138, 108);
+                p.ClientSize = new Size(158, 108);
                 p.Image = (Image)MyImage;
                 p.Cursor = Cursors.Hand;
 

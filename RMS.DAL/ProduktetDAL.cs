@@ -22,16 +22,17 @@ namespace RMS.DAL
                 };
 
                 DatabaseConn.command.Parameters.AddWithValue("@Emri", model.Emri);
-                DatabaseConn.command.Parameters.AddWithValue("@Madhesia", model.Madhesia);
+                //DatabaseConn.command.Parameters.AddWithValue("@Madhesia", model.Madhesia);
                 DatabaseConn.command.Parameters.AddWithValue("@Cmimi", model.Cmimi);
-                DatabaseConn.command.Parameters.AddWithValue("@InsertBy", 1);
-                DatabaseConn.command.Parameters.AddWithValue("@InsertDate", DateTime.Now);
+                //DatabaseConn.command.Parameters.AddWithValue("@InsertBy", 1);
+                //DatabaseConn.command.Parameters.AddWithValue("@InsertDate", DateTime.Now);
                 //command.Parameters.AddWithValue("@LUD");
                 //command.Parameters.AddWithValue("@LUN");
                 //command.Parameters.AddWithValue("@LUB");
 
                 DatabaseConn.command.ExecuteNonQuery();
                 DatabaseConn.conn.Close();
+                ShowProduktet();
             }
         }
 

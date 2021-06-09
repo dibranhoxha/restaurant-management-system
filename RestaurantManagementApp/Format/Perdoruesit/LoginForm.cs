@@ -25,7 +25,7 @@ namespace RestaurantManagementApp.Format.Perdoruesit
 
             if (PerdoruesiAktiv.LoggedIn == true)
             {
-                MessageBox.Show(mesazhi);
+                //MessageBox.Show(mesazhi);
                 Hide();
 
 
@@ -38,7 +38,8 @@ namespace RestaurantManagementApp.Format.Perdoruesit
                 }
                 else if (PerdoruesiAktiv.Autorizohet("Stafi Sherbyes"))
                 {
-
+                    Form1 AdminHome = new Form1();
+                    AdminHome.Show();
                 }
                 else if (PerdoruesiAktiv.Autorizohet("Stafi Kuzhines"))
                 {
@@ -59,6 +60,10 @@ namespace RestaurantManagementApp.Format.Perdoruesit
             }
         }
 
-       
+        private void fjalekalimiTextBox_IconLeftClick(object sender, EventArgs e)
+        {
+            if (fjalekalimiTextBox.UseSystemPasswordChar == true) fjalekalimiTextBox.UseSystemPasswordChar = false;
+            else fjalekalimiTextBox.UseSystemPasswordChar = true;
+        }
     }
 }

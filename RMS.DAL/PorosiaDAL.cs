@@ -16,14 +16,14 @@ namespace RMS.DAL
             using (DatabaseConn.conn = new SqlConnection(DatabaseConn.connString))
             {
                 DatabaseConn.conn.Open();
-                DatabaseConn.command = new SqlCommand("usp_InsertPorosi", DatabaseConn.conn)
+                DatabaseConn.command = new SqlCommand("usp_ShtoPorosi", DatabaseConn.conn)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
 
                 //DatabaseConn.command.Parameters.AddWithValue("@TavolinaID", model.TavolinaID);
                 //DatabaseConn.command.Parameters.AddWithValue("@SherbyesiID", model.SherbyesiID);
-                DatabaseConn.command.Parameters.AddWithValue("@DataEPorosise", model.DataEPorosise);
+                //DatabaseConn.command.Parameters.AddWithValue("@DataEPorosise", model.DataEPorosise);
                 DatabaseConn.command.Parameters.Add("@PorosiaID", SqlDbType.Int).Direction = ParameterDirection.Output;
                 //command.Parameters.AddWithValue("@InsertBy");
                 //command.Parameters.AddWithValue("@InsertDate", DateTime.Now);

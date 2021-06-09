@@ -34,9 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.fjalekalimiTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.usernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
@@ -44,6 +41,9 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.fjalekalimiTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.usernameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,94 +118,6 @@
             this.label3.Size = new System.Drawing.Size(329, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Funksionet e sistemit do te inicializohen ne baze te llogarise se kycur";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-301, 15);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(832, 554);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // fjalekalimiTextBox
-            // 
-            this.fjalekalimiTextBox.AutoRoundedCorners = true;
-            this.fjalekalimiTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.fjalekalimiTextBox.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.fjalekalimiTextBox.BorderRadius = 21;
-            this.fjalekalimiTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fjalekalimiTextBox.DefaultText = "";
-            this.fjalekalimiTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.fjalekalimiTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.fjalekalimiTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.fjalekalimiTextBox.DisabledState.Parent = this.fjalekalimiTextBox;
-            this.fjalekalimiTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.fjalekalimiTextBox.FocusedState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.fjalekalimiTextBox.FocusedState.Parent = this.fjalekalimiTextBox;
-            this.fjalekalimiTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.fjalekalimiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.fjalekalimiTextBox.HoverState.BorderColor = System.Drawing.Color.White;
-            this.fjalekalimiTextBox.HoverState.Parent = this.fjalekalimiTextBox;
-            this.fjalekalimiTextBox.IconLeftOffset = new System.Drawing.Point(12, 0);
-            this.fjalekalimiTextBox.IconRightOffset = new System.Drawing.Point(12, 0);
-            this.fjalekalimiTextBox.Location = new System.Drawing.Point(576, 244);
-            this.fjalekalimiTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fjalekalimiTextBox.Name = "fjalekalimiTextBox";
-            this.fjalekalimiTextBox.PasswordChar = '\0';
-            this.fjalekalimiTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.fjalekalimiTextBox.PlaceholderText = "Fjalekalimi";
-            this.fjalekalimiTextBox.SelectedText = "";
-            this.fjalekalimiTextBox.ShadowDecoration.BorderRadius = 26;
-            this.fjalekalimiTextBox.ShadowDecoration.Color = System.Drawing.Color.LightSlateGray;
-            this.fjalekalimiTextBox.ShadowDecoration.Depth = 20;
-            this.fjalekalimiTextBox.ShadowDecoration.Enabled = true;
-            this.fjalekalimiTextBox.ShadowDecoration.Parent = this.fjalekalimiTextBox;
-            this.fjalekalimiTextBox.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.fjalekalimiTextBox.Size = new System.Drawing.Size(390, 45);
-            this.fjalekalimiTextBox.TabIndex = 2;
-            this.fjalekalimiTextBox.TextOffset = new System.Drawing.Point(5, 0);
-            this.fjalekalimiTextBox.UseSystemPasswordChar = true;
-            this.fjalekalimiTextBox.IconRightClick += new System.EventHandler(this.guna2TextBox1_IconRightClick);
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.AutoRoundedCorners = true;
-            this.usernameTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.usernameTextBox.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.usernameTextBox.BorderRadius = 21;
-            this.usernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.usernameTextBox.DefaultText = "";
-            this.usernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.usernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.usernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameTextBox.DisabledState.Parent = this.usernameTextBox;
-            this.usernameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameTextBox.FocusedState.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.usernameTextBox.FocusedState.Parent = this.usernameTextBox;
-            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.usernameTextBox.HoverState.BorderColor = System.Drawing.Color.White;
-            this.usernameTextBox.HoverState.Parent = this.usernameTextBox;
-            this.usernameTextBox.IconLeft = ((System.Drawing.Image)(resources.GetObject("usernameTextBox.IconLeft")));
-            this.usernameTextBox.IconLeftOffset = new System.Drawing.Point(12, 0);
-            this.usernameTextBox.Location = new System.Drawing.Point(576, 189);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.PasswordChar = '\0';
-            this.usernameTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.usernameTextBox.PlaceholderText = "Username";
-            this.usernameTextBox.SelectedText = "";
-            this.usernameTextBox.ShadowDecoration.BorderRadius = 26;
-            this.usernameTextBox.ShadowDecoration.Color = System.Drawing.Color.LightSlateGray;
-            this.usernameTextBox.ShadowDecoration.Depth = 20;
-            this.usernameTextBox.ShadowDecoration.Enabled = true;
-            this.usernameTextBox.ShadowDecoration.Parent = this.usernameTextBox;
-            this.usernameTextBox.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
-            this.usernameTextBox.Size = new System.Drawing.Size(389, 45);
-            this.usernameTextBox.TabIndex = 1;
-            this.usernameTextBox.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // gunaControlBox3
             // 
@@ -292,6 +204,99 @@
             this.guna2Panel4.ShadowDecoration.Parent = this.guna2Panel4;
             this.guna2Panel4.Size = new System.Drawing.Size(1013, 5);
             this.guna2Panel4.TabIndex = 36;
+            // 
+            // fjalekalimiTextBox
+            // 
+            this.fjalekalimiTextBox.AutoRoundedCorners = true;
+            this.fjalekalimiTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.fjalekalimiTextBox.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.fjalekalimiTextBox.BorderRadius = 21;
+            this.fjalekalimiTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fjalekalimiTextBox.DefaultText = "";
+            this.fjalekalimiTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.fjalekalimiTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.fjalekalimiTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fjalekalimiTextBox.DisabledState.Parent = this.fjalekalimiTextBox;
+            this.fjalekalimiTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.fjalekalimiTextBox.FocusedState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.fjalekalimiTextBox.FocusedState.Parent = this.fjalekalimiTextBox;
+            this.fjalekalimiTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.fjalekalimiTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.fjalekalimiTextBox.HoverState.BorderColor = System.Drawing.Color.White;
+            this.fjalekalimiTextBox.HoverState.Parent = this.fjalekalimiTextBox;
+            this.fjalekalimiTextBox.IconLeft = global::RestaurantManagementApp.Properties.Resources.padlock;
+            this.fjalekalimiTextBox.IconLeftOffset = new System.Drawing.Point(12, 0);
+            this.fjalekalimiTextBox.IconRight = global::RestaurantManagementApp.Properties.Resources.visibility;
+            this.fjalekalimiTextBox.IconRightOffset = new System.Drawing.Point(12, 0);
+            this.fjalekalimiTextBox.Location = new System.Drawing.Point(576, 244);
+            this.fjalekalimiTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fjalekalimiTextBox.Name = "fjalekalimiTextBox";
+            this.fjalekalimiTextBox.PasswordChar = '\0';
+            this.fjalekalimiTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.fjalekalimiTextBox.PlaceholderText = "Fjalekalimi";
+            this.fjalekalimiTextBox.SelectedText = "";
+            this.fjalekalimiTextBox.ShadowDecoration.BorderRadius = 26;
+            this.fjalekalimiTextBox.ShadowDecoration.Color = System.Drawing.Color.LightSlateGray;
+            this.fjalekalimiTextBox.ShadowDecoration.Depth = 20;
+            this.fjalekalimiTextBox.ShadowDecoration.Enabled = true;
+            this.fjalekalimiTextBox.ShadowDecoration.Parent = this.fjalekalimiTextBox;
+            this.fjalekalimiTextBox.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.fjalekalimiTextBox.Size = new System.Drawing.Size(390, 45);
+            this.fjalekalimiTextBox.TabIndex = 2;
+            this.fjalekalimiTextBox.TextOffset = new System.Drawing.Point(5, 0);
+            this.fjalekalimiTextBox.UseSystemPasswordChar = true;
+            this.fjalekalimiTextBox.IconLeftClick += new System.EventHandler(this.fjalekalimiTextBox_IconLeftClick);
+            this.fjalekalimiTextBox.IconRightClick += new System.EventHandler(this.guna2TextBox1_IconRightClick);
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.AutoRoundedCorners = true;
+            this.usernameTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.usernameTextBox.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.usernameTextBox.BorderRadius = 21;
+            this.usernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.usernameTextBox.DefaultText = "";
+            this.usernameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.usernameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.usernameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.usernameTextBox.DisabledState.Parent = this.usernameTextBox;
+            this.usernameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.usernameTextBox.FocusedState.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.usernameTextBox.FocusedState.Parent = this.usernameTextBox;
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.usernameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.usernameTextBox.HoverState.BorderColor = System.Drawing.Color.White;
+            this.usernameTextBox.HoverState.Parent = this.usernameTextBox;
+            this.usernameTextBox.IconLeft = ((System.Drawing.Image)(resources.GetObject("usernameTextBox.IconLeft")));
+            this.usernameTextBox.IconLeftOffset = new System.Drawing.Point(12, 0);
+            this.usernameTextBox.Location = new System.Drawing.Point(576, 189);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.PasswordChar = '\0';
+            this.usernameTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+            this.usernameTextBox.PlaceholderText = "Username";
+            this.usernameTextBox.SelectedText = "";
+            this.usernameTextBox.ShadowDecoration.BorderRadius = 26;
+            this.usernameTextBox.ShadowDecoration.Color = System.Drawing.Color.LightSlateGray;
+            this.usernameTextBox.ShadowDecoration.Depth = 20;
+            this.usernameTextBox.ShadowDecoration.Enabled = true;
+            this.usernameTextBox.ShadowDecoration.Parent = this.usernameTextBox;
+            this.usernameTextBox.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(4, 3, 4, 5);
+            this.usernameTextBox.Size = new System.Drawing.Size(389, 45);
+            this.usernameTextBox.TabIndex = 1;
+            this.usernameTextBox.TextOffset = new System.Drawing.Point(5, 0);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::RestaurantManagementApp.Properties.Resources.pexels_quang_nguyen_vinh_2159065;
+            this.guna2PictureBox1.InitialImage = global::RestaurantManagementApp.Properties.Resources.pexels_quang_nguyen_vinh_2159065;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-301, 15);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(832, 554);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // LoginForm
             // 

@@ -23,8 +23,10 @@ namespace RestaurantManagementApp.Format.Produktet
 
         private void btnSubmitProduct_Click(object sender, EventArgs e)
         {
-            Produkti produkti = new Produkti(txbEmriProdukt.Text, txbMadhesiaProdukt.Text, decimal.Parse(txbCmimiProdukt.Text));
+            Produkti produkti = new Produkti(txbEmriProdukt.Text, decimal.Parse(txbCmimiProdukt.Text));
             produktetBLL.InsertProdukt(produkti);
+            Close();
+
         }
     }
 }

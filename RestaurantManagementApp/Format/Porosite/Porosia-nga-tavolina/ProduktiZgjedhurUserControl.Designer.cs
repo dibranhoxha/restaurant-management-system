@@ -66,6 +66,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::RestaurantManagementApp.Properties.Resources.delete_1_;
             this.pictureBox1.Location = new System.Drawing.Point(7, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 30);

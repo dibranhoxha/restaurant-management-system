@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabletiPorosiaForm));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaGradientTileButton10 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton3 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton4 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
@@ -64,7 +62,6 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
@@ -73,8 +70,6 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
-            this.gunaPanel1.Controls.Add(this.gunaPictureBox2);
-            this.gunaPanel1.Controls.Add(this.gunaGradientTileButton10);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton3);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton4);
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton2);
@@ -84,47 +79,6 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(101, 818);
             this.gunaPanel1.TabIndex = 2;
-            // 
-            // gunaPictureBox2
-            // 
-            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Location = new System.Drawing.Point(18, 33);
-            this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(69, 80);
-            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaPictureBox2.TabIndex = 5;
-            this.gunaPictureBox2.TabStop = false;
-            // 
-            // gunaGradientTileButton10
-            // 
-            this.gunaGradientTileButton10.Animated = true;
-            this.gunaGradientTileButton10.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton10.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton10.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton10.BaseColor1 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton10.BaseColor2 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton10.BorderColor = System.Drawing.Color.SteelBlue;
-            this.gunaGradientTileButton10.BorderSize = 1;
-            this.gunaGradientTileButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaGradientTileButton10.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton10.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton10.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
-            this.gunaGradientTileButton10.ForeColor = System.Drawing.Color.Gray;
-            this.gunaGradientTileButton10.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.gunaGradientTileButton10.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton10.Image")));
-            this.gunaGradientTileButton10.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton10.Location = new System.Drawing.Point(20, 499);
-            this.gunaGradientTileButton10.Name = "gunaGradientTileButton10";
-            this.gunaGradientTileButton10.OnHoverBaseColor1 = System.Drawing.Color.LightSlateGray;
-            this.gunaGradientTileButton10.OnHoverBaseColor2 = System.Drawing.Color.SteelBlue;
-            this.gunaGradientTileButton10.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton10.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton10.OnHoverImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientTileButton10.OnHoverImage")));
-            this.gunaGradientTileButton10.OnPressedColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton10.Radius = 6;
-            this.gunaGradientTileButton10.Size = new System.Drawing.Size(60, 60);
-            this.gunaGradientTileButton10.TabIndex = 4;
-            this.gunaGradientTileButton10.Text = "Pakot";
             // 
             // gunaGradientTileButton3
             // 
@@ -332,7 +286,7 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1256, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1236, 0);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Gray;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -348,7 +302,7 @@
             this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
             this.gunaControlBox2.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1205, 0);
+            this.gunaControlBox2.Location = new System.Drawing.Point(1185, 0);
             this.gunaControlBox2.Name = "gunaControlBox2";
             this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.Gray;
             this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
@@ -364,7 +318,7 @@
             this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
             this.gunaControlBox3.IconColor = System.Drawing.Color.Gray;
             this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(1154, 0);
+            this.gunaControlBox3.Location = new System.Drawing.Point(1134, 0);
             this.gunaControlBox3.Name = "gunaControlBox3";
             this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.Gray;
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
@@ -379,7 +333,7 @@
             this.gunaLabel4.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel4.Location = new System.Drawing.Point(916, 681);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(37, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(36, 15);
             this.gunaLabel4.TabIndex = 39;
             this.gunaLabel4.Text = "Taksa";
             // 
@@ -390,7 +344,7 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel5.Location = new System.Drawing.Point(916, 714);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(34, 15);
+            this.gunaLabel5.Size = new System.Drawing.Size(33, 15);
             this.gunaLabel5.TabIndex = 38;
             this.gunaLabel5.Text = "Total";
             // 
@@ -412,7 +366,7 @@
             this.gunaLabel7.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel7.Location = new System.Drawing.Point(1207, 681);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel7.Size = new System.Drawing.Size(29, 15);
             this.gunaLabel7.TabIndex = 36;
             this.gunaLabel7.Text = "16%";
             // 
@@ -423,8 +377,9 @@
             this.gunaLabel8.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel8.Location = new System.Drawing.Point(1193, 663);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(0, 15);
+            this.gunaLabel8.Size = new System.Drawing.Size(45, 15);
             this.gunaLabel8.TabIndex = 35;
+            this.gunaLabel8.Text = "0.0000";
             // 
             // gunaLabel12
             // 
@@ -508,11 +463,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(100, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 19);
+            this.label1.Size = new System.Drawing.Size(186, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Produktet e zgjedhura";
             // 
@@ -570,7 +525,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel3.Location = new System.Drawing.Point(917, 640);
+            this.gunaLabel3.Location = new System.Drawing.Point(915, 645);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(56, 15);
             this.gunaLabel3.TabIndex = 43;
@@ -583,7 +538,7 @@
             this.gunaLabel9.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel9.Location = new System.Drawing.Point(1208, 645);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel9.Size = new System.Drawing.Size(29, 15);
             this.gunaLabel9.TabIndex = 44;
             this.gunaLabel9.Text = "10%";
             // 
@@ -616,11 +571,10 @@
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TabletiPorosiaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gunaPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
@@ -640,7 +594,6 @@
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton3;
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton4;
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox3;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
@@ -664,7 +617,6 @@
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton10;
     }
 }
 

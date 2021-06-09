@@ -22,6 +22,10 @@ namespace RestaurantManagementApp.Format.Produktet
         {
             AddProduct addForm = new AddProduct();
             addForm.Show();
+            addForm.FormClosing += (thesender, thee) =>
+            {
+                Produktet_Load(null,null);
+            };
         }
 
         private void Produktet_Load(object sender, EventArgs e)

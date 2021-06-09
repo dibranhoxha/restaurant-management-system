@@ -19,10 +19,9 @@ namespace RMS.BO
         public int LUB { get; set; }
 
 
-        public Produkti(string emri, string madhesia, decimal cmimi)
+        public Produkti(string emri, decimal cmimi)
         {
             this.Emri = emri;
-            this.Madhesia = madhesia;
             this.Cmimi = cmimi;
         }
         public Produkti(int produktID, string emri, decimal cmimi)
