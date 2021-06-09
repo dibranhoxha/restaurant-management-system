@@ -38,7 +38,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 ch2.CheckedChanged += (sender, e) =>
                 {
                     ch.CheckState = CheckState.Unchecked;
-                    // call the function that will go througth the 'kategorite_chb' and get the checked
+                    // call the function that will go througth the 'kategorite_chboxes' and get the checked
                     // checkboxes. Pass those as parameters to the db procedure
                 };
                 kategorite_chb.Add(ch2);
@@ -81,7 +81,6 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 flowLayoutPanel2.Controls.Add(pr);
             }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flowLayoutPanel2, gunaVScrollBar1, true);
@@ -92,21 +91,16 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
             
             RMS.BO.Porosia porosia = new RMS.BO.Porosia();
             porosia.DataEPorosise = DateTime.Now;
-            int PorosiID = porosiaBLL.ShtoPorosi(porosia);
+            porosia.PorosiaID = porosiaBLL.ShtoPorosi(porosia);
             
-            string msg = "Porosia Id - " + PorosiID.ToString() + "\r\n";
-
             foreach (UserControl us in flowLayoutPanel1.Controls)
             {
                 ProduktiPictureBox pbox = us.Controls.OfType<ProduktiPictureBox>().First();
                 ProduktiUserControl pr = us.Controls.OfType<ProduktiUserControl>().First();
-                
-
                 Guna.UI.WinForms.GunaNumeric nup = (Guna.UI.WinForms.GunaNumeric)us.Controls.Find("gunaNumeric1", true)[0];
-                for (int i = 0; i < nup.Value; i++)
-                {
-                    msg += pbox.Emri + ", Cmimi - " + pbox.Cmimi + "\r\n";
-                }
+                
+                porosiaBLL.ShtoProduktePerPorosi(porosia, pbox.ProduktiID, Convert.ToInt32(nup.Value));
+                MessageBox.Show(porosia.PorosiaID.ToString() + " - " + pbox.ProduktiID.ToString() +" - "+ nup.Value.ToString());
             }
             foreach (UserControl us in flowLayoutPanel1.Controls)
             {
@@ -117,10 +111,9 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 pr.Controls.Add(pbox);
                 flowLayoutPanel2.Controls.Add(pr);
             }
-            gunaLabel8.Text = "";
-            gunaLabel6.Text = "";
+            gunaLabel8.Text = "0.00";
+            gunaLabel6.Text = "0.00";
             flowLayoutPanel1.Controls.Clear();
-            MessageBox.Show(msg);
         }
 
         private ProduktiUserControl Produkti_UserControl(ProduktiPictureBox p)

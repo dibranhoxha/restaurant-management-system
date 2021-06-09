@@ -22,5 +22,9 @@ namespace RMS.BLL
         {
             return porosiaDAL.ShtoPorosi(model);
         }
+        public void ShtoProduktePerPorosi(Porosia model, int ProduktiId, int Sasia)
+        {
+            porosiaDAL.ShtoProduktePerPorosi(model, ProduktiId, Sasia);
+        }
     }
 }
