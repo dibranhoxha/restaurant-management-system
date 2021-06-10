@@ -50,22 +50,47 @@ namespace RMS.DAL
                 return dataTable;
             }
         }
-        public List<Produkti> GetProduktet()
+        public List<Produkti> KtheProduktet(int kategori)
         {
             using (DatabaseConn.conn = new SqlConnection(DatabaseConn.connString))
             {
                 DatabaseConn.conn.Open();
-                DatabaseConn.dataAdapter = new SqlDataAdapter("usp_GetProduktet", DatabaseConn.conn);
+
+                DatabaseConn.dataAdapter = new SqlDataAdapter("usp_KtheProduktetNgaKategoria", DatabaseConn.conn);
+                DatabaseConn.dataAdapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DatabaseConn.dataAdapter.SelectCommand.Parameters.AddWithValue("@KategoriId", kategori);
                 DataTable dataTable = new DataTable();
                 List<Produkti> produktet = new List<Produkti>();
                 DatabaseConn.dataAdapter.Fill(dataTable);
                 IEnumerable<DataRow> produktet_dbrows = dataTable.AsEnumerable();
                 foreach (DataRow row in produktet_dbrows)
                 {
-                    Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]),row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]));
+                    Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), Convert.ToInt32(row["KategoriaId"]), row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]));
                     produktet.Add(produkti);
                 }
 
+                DatabaseConn.conn.Close();
+                return produktet;
+            }
+        }
+        public List<Produkti> KtheProduktet(string[] nenkategori)
+        {
+            using (DatabaseConn.conn = new SqlConnection(DatabaseConn.connString))
+            {
+                DatabaseConn.conn.Open();
+                List<Produkti> produktet = new List<Produkti>();
+                foreach (var item in nenkategori)
+                {
+                    DatabaseConn.dataAdapter = new SqlDataAdapter("usp_KtheProduktetNgaNenkategoria", DatabaseConn.conn);
+                    DataTable dataTable = new DataTable();
+                    DatabaseConn.dataAdapter.Fill(dataTable);
+                    IEnumerable<DataRow> produktet_dbrows = dataTable.AsEnumerable();
+                    foreach (DataRow row in produktet_dbrows)
+                    {
+                        Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), 1,row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]));
+                        produktet.Add(produkti);
+                    }
+                }
                 DatabaseConn.conn.Close();
                 return produktet;
             }

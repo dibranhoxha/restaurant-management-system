@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using RMS.BO;
 
 
 namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
@@ -9,6 +10,8 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         public ProduktiPictureBox() : base() { }
 
         public int ProduktiID { get; set; }
+
+        public int KategoriID { get; set; }
 
         public string Emri { get; set; }
 
@@ -31,6 +34,22 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         public bool Kerko(string str, StringComparison comparison)
         {
             return Emri.IndexOf(str, comparison) >= 0;
+        }
+        public bool FilteroTeGjitha(int KategoriId)
+        {
+            if (this.KategoriID == KategoriId)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool FilteroNeBazeTeKategorise(int KategoriId)
+        {
+            if (this.KategoriID == KategoriId)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

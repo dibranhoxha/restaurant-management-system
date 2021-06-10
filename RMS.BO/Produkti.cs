@@ -9,8 +9,8 @@ namespace RMS.BO
     public class Produkti
     {
         public int ProduktID { get; set; }
+        public int KategoriID { get; set; }
         public string Emri { get; set; }
-        public string Madhesia { get; set; }
         public decimal Cmimi { get; set; }
         public int InsertBy { get; set; }
         public DateTime InsertDate { get; set; }
@@ -18,15 +18,10 @@ namespace RMS.BO
         public int LUN { get; set; }
         public int LUB { get; set; }
 
-
-        public Produkti(string emri, decimal cmimi)
-        {
-            this.Emri = emri;
-            this.Cmimi = cmimi;
-        }
-        public Produkti(int produktID, string emri, decimal cmimi)
+        public Produkti(int produktID, int kategoriID, string emri, decimal cmimi)
         {
             this.ProduktID = produktID;
+            this.KategoriID = kategoriID;
             this.Emri = emri;
             this.Cmimi = cmimi;
         }

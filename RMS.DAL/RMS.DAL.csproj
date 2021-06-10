@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DatabaseConn.cs" />
+    <Compile Include="KategoriteDAL.cs" />
+    <Compile Include="NenkategoriteDAL.cs" />
     <Compile Include="PerdoruesitDAL.cs" />
     <Compile Include="PorosiaDAL.cs" />
     <Compile Include="ProduktetDAL.cs" />

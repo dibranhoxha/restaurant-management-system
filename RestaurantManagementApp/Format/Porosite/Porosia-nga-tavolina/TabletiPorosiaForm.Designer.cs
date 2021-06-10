@@ -54,17 +54,22 @@
             this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaVScrollBar2 = new Guna.UI.WinForms.GunaVScrollBar();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menaxhimiIRestaurantitDataSet = new RestaurantManagementApp.MenaxhimiIRestaurantitDataSet();
+            this.menaxhimiIRestaurantitDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gunaPanel1.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiIRestaurantitDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiIRestaurantitDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaPanel1
@@ -110,6 +115,7 @@
             this.gunaGradientTileButton3.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton3.TabIndex = 3;
             this.gunaGradientTileButton3.Text = "Akullore";
+            this.gunaGradientTileButton3.Click += new System.EventHandler(this.gunaGradientTileButton3_Click);
             // 
             // gunaGradientTileButton4
             // 
@@ -141,6 +147,7 @@
             this.gunaGradientTileButton4.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton4.TabIndex = 2;
             this.gunaGradientTileButton4.Text = "Embelsira";
+            this.gunaGradientTileButton4.Click += new System.EventHandler(this.gunaGradientTileButton4_Click);
             // 
             // gunaGradientTileButton2
             // 
@@ -172,6 +179,7 @@
             this.gunaGradientTileButton2.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton2.TabIndex = 1;
             this.gunaGradientTileButton2.Text = "Pije";
+            this.gunaGradientTileButton2.Click += new System.EventHandler(this.gunaGradientTileButton2_Click);
             // 
             // gunaGradientTileButton1
             // 
@@ -203,6 +211,7 @@
             this.gunaGradientTileButton1.Size = new System.Drawing.Size(60, 60);
             this.gunaGradientTileButton1.TabIndex = 0;
             this.gunaGradientTileButton1.Text = "Ushqim";
+            this.gunaGradientTileButton1.Click += new System.EventHandler(this.gunaGradientTileButton1_Click);
             // 
             // gunaShadowPanel1
             // 
@@ -333,7 +342,7 @@
             this.gunaLabel4.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel4.Location = new System.Drawing.Point(916, 681);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(36, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(37, 15);
             this.gunaLabel4.TabIndex = 39;
             this.gunaLabel4.Text = "Taksa";
             // 
@@ -344,7 +353,7 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel5.Location = new System.Drawing.Point(916, 714);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(33, 15);
+            this.gunaLabel5.Size = new System.Drawing.Size(34, 15);
             this.gunaLabel5.TabIndex = 38;
             this.gunaLabel5.Text = "Total";
             // 
@@ -366,7 +375,7 @@
             this.gunaLabel7.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel7.Location = new System.Drawing.Point(1207, 681);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(29, 15);
+            this.gunaLabel7.Size = new System.Drawing.Size(31, 15);
             this.gunaLabel7.TabIndex = 36;
             this.gunaLabel7.Text = "16%";
             // 
@@ -394,11 +403,11 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(102, 187);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(102, 193);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(15);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(761, 617);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(761, 614);
             this.flowLayoutPanel2.TabIndex = 34;
             // 
             // gunaVScrollBar1
@@ -437,16 +446,6 @@
             this.gunaVScrollBar2.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(206)))), ((int)(((byte)(210)))));
             this.gunaVScrollBar2.ThumbHoverColor = System.Drawing.Color.LightSlateGray;
             this.gunaVScrollBar2.ThumbPressedColor = System.Drawing.Color.DarkGray;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(146, 147);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(15);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(670, 23);
-            this.flowLayoutPanel3.TabIndex = 35;
             // 
             // guna2GradientPanel1
             // 
@@ -538,9 +537,50 @@
             this.gunaLabel9.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel9.Location = new System.Drawing.Point(1208, 645);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(29, 15);
+            this.gunaLabel9.Size = new System.Drawing.Size(31, 15);
             this.gunaLabel9.TabIndex = 44;
             this.gunaLabel9.Text = "10%";
+            // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
+            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.FormattingEnabled = true;
+            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.ItemHeight = 25;
+            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(234, 150);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
+            this.guna2ComboBox1.Size = new System.Drawing.Size(584, 31);
+            this.guna2ComboBox1.StartIndex = 0;
+            this.guna2ComboBox1.TabIndex = 45;
+            this.guna2ComboBox1.SelectionChangeCommitted += new System.EventHandler(this.guna2ComboBox1_SelectionChangeCommited);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(142, 155);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Kategorite";
+            // 
+            // menaxhimiIRestaurantitDataSet
+            // 
+            this.menaxhimiIRestaurantitDataSet.DataSetName = "MenaxhimiIRestaurantitDataSet";
+            this.menaxhimiIRestaurantitDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // menaxhimiIRestaurantitDataSetBindingSource
+            // 
+            this.menaxhimiIRestaurantitDataSetBindingSource.DataSource = this.menaxhimiIRestaurantitDataSet;
+            this.menaxhimiIRestaurantitDataSetBindingSource.Position = 0;
             // 
             // TabletiPorosiaForm
             // 
@@ -548,11 +588,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1300, 818);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.gunaLabel9);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.guna2TrackBar1);
             this.Controls.Add(this.guna2GradientPanel1);
-            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.gunaVScrollBar2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -580,6 +621,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiIRestaurantitDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiIRestaurantitDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,12 +654,15 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.BindingSource menaxhimiIRestaurantitDataSetBindingSource;
+        private MenaxhimiIRestaurantitDataSet menaxhimiIRestaurantitDataSet;
     }
 }
 

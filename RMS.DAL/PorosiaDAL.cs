@@ -47,7 +47,7 @@ namespace RMS.DAL
                     CommandType = CommandType.StoredProcedure
                 };
 
-                DatabaseConn.command.Parameters.AddWithValue("@PorosiaID", model.PorosiaID);
+                DatabaseConn.command.Parameters.AddWithValue("@PorosiaId", model.PorosiaID);
                 DatabaseConn.command.Parameters.AddWithValue("@ProduktiId", ProduktiId);
                 DatabaseConn.command.Parameters.AddWithValue("@Sasia", Sasia);
                 //command.Parameters.AddWithValue("@InsertBy");

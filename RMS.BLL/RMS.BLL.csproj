@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KategoriteBLL.cs" />
+    <Compile Include="NenkategoriteBLL.cs" />
     <Compile Include="PerdoruesitBLL.cs" />
     <Compile Include="PorosiaBLL.cs" />
     <Compile Include="ProduktetBLL.cs" />

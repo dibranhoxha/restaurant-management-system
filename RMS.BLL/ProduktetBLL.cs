@@ -27,9 +27,9 @@ namespace RMS.BLL
         {
             return produktetDAL.ShowProduktet();
         }
-        public List<Produkti> GetProduktet()
+        public List<Produkti> KtheProduktet(int kategori)
         {
-            return produktetDAL.GetProduktet();
+            return produktetDAL.KtheProduktet(kategori);
         }
     }
 }

@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kategoria.cs" />
     <Compile Include="ListaEProdukteve.cs" />
+    <Compile Include="Nenkategoria.cs" />
     <Compile Include="Perdoruesi.cs" />
     <Compile Include="PerdoruesiAktiv.cs" />
     <Compile Include="Porosia.cs" />
