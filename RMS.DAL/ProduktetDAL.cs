@@ -65,7 +65,7 @@ namespace RMS.DAL
                 IEnumerable<DataRow> produktet_dbrows = dataTable.AsEnumerable();
                 foreach (DataRow row in produktet_dbrows)
                 {
-                    Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), Convert.ToInt32(row["KategoriaId"]), row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]));
+                    Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), Convert.ToInt32(row["KategoriaId"]), row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]), row["Foto"].ToString());
                     produktet.Add(produkti);
                 }
 
@@ -87,7 +87,7 @@ namespace RMS.DAL
                     IEnumerable<DataRow> produktet_dbrows = dataTable.AsEnumerable();
                     foreach (DataRow row in produktet_dbrows)
                     {
-                        Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), 1,row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]));
+                        Produkti produkti = new Produkti(Convert.ToInt32(row["ProduktiID"]), 1,row["Emri"].ToString(), Convert.ToDecimal(row["Cmimi"]), row["Emri"].ToString());
                         produktet.Add(produkti);
                     }
                 }

@@ -44,7 +44,6 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         
         private void InicializoProduktet(int kategoria)
         {
-            Bitmap MyImage = new Bitmap(@"C:\Users\L\Downloads\pizza-pizza-filled-with-tomatoes-salami-olives.jpg");
 
             ProduktetBLL produktetBLL = new ProduktetBLL();
             List<Produkti> produktet = produktetBLL.KtheProduktet(kategoria);
@@ -55,13 +54,15 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                 p.ProduktiID = item.ProduktID;
                 p.KategoriID = item.KategoriID;
                 p.Cmimi = item.Cmimi;
+                p.Foto = item.Foto;
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
                 p.ClientSize = new Size(158, 108);
-                p.Image = (Image)MyImage;
+                p.Load(p.Foto);
                 p.Cursor = Cursors.Hand;
 
                 liscollection.Add(p);
             }
+
         }
 
         private void ParaqitProduktet(int kategoriaId, int nenkategoriId)
@@ -148,9 +149,11 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                         {
                             Kategoria kategoria = kategorite.Find(x => x.Id == KategoriID_global);
                             Nenkategoria nkat = kategoria.Nenkategorite.Find(x => x.Id == p.KategoriID);
+
                             if (nkat != null)
                             {
-                                if (p.KategoriID == Convert.ToInt32(guna2ComboBox1.SelectedItem))
+                                
+                                if (p.KategoriID == Convert.ToInt32(guna2ComboBox1.SelectedValue))
                                 {
                                     flowLayoutPanel2.Controls.Add(pr);
                                 }
@@ -237,6 +240,8 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
         
         private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
         {
+            
+            List<ProduktiUserControl> temp = flowLayoutPanel2.Controls.OfType<ProduktiUserControl>().ToList();
             flowLayoutPanel2.Controls.Clear();
 
             if (string.IsNullOrEmpty(guna2TextBox1.Text) == false)
@@ -247,7 +252,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                     try
                     {
                         p = pr.Controls.OfType<ProduktiPictureBox>().First();
-                        if (p.Kerko(guna2TextBox1.Text, StringComparison.OrdinalIgnoreCase))
+                        if (p.Kerko(guna2TextBox1.Text, StringComparison.OrdinalIgnoreCase) && p.KategoriID == Convert.ToInt32(guna2ComboBox1.SelectedValue))
                         {
                             if (p.CheckState != CheckState.Checked)
                                 flowLayoutPanel2.Controls.Add(pr);
@@ -266,7 +271,7 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
                     try
                     {
                         ProduktiPictureBox p = pr.Controls.OfType<ProduktiPictureBox>().First();
-                        if (p.CheckState != CheckState.Checked)
+                        if (p.CheckState != CheckState.Checked && p.KategoriID == Convert.ToInt32(guna2ComboBox1.SelectedValue))
                             flowLayoutPanel2.Controls.Add(pr);
                     }
                     catch (Exception)
@@ -285,35 +290,44 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
 
         private void gunaGradientTileButton1_Click(object sender, EventArgs e)
         {
-            ParaqitProduktet(1,1);
+            
             KategoriID_global = 1;
             ShtoNenkategoriteNeCbox();
+            ParaqitProduktet(1, Convert.ToInt32(guna2ComboBox1.SelectedValue));
+
         }
 
         private void gunaGradientTileButton2_Click(object sender, EventArgs e)
         {
-            ParaqitProduktet(2,1);
+           
             KategoriID_global = 2;
             ShtoNenkategoriteNeCbox();
+            ParaqitProduktet(2, Convert.ToInt32(guna2ComboBox1.SelectedValue));
+
         }
 
         private void gunaGradientTileButton4_Click(object sender, EventArgs e)
         {
-            ParaqitProduktet(3,1);
+            
             KategoriID_global = 3;
             ShtoNenkategoriteNeCbox();
+            ParaqitProduktet(3, Convert.ToInt32(guna2ComboBox1.SelectedValue));
+
         }
 
         private void gunaGradientTileButton3_Click(object sender, EventArgs e)
         {
-            ParaqitProduktet(4,1);
+            
             KategoriID_global = 4;
             ShtoNenkategoriteNeCbox();
+            ParaqitProduktet(4, Convert.ToInt32(guna2ComboBox1.SelectedValue));
+
         }
        
         private void guna2ComboBox1_SelectionChangeCommited(object sender, EventArgs e)
         {
-            ParaqitProduktet(KategoriID_global, Convert.ToInt32(guna2ComboBox1.SelectedValue.ToString()));
+            ParaqitProduktet(KategoriID_global, Convert.ToInt32(guna2ComboBox1.SelectedValue));
         }
+
     }
 }

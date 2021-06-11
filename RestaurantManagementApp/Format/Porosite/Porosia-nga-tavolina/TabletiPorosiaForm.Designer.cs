@@ -342,7 +342,7 @@
             this.gunaLabel4.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel4.Location = new System.Drawing.Point(916, 681);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(37, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(36, 15);
             this.gunaLabel4.TabIndex = 39;
             this.gunaLabel4.Text = "Taksa";
             // 
@@ -353,7 +353,7 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.Gray;
             this.gunaLabel5.Location = new System.Drawing.Point(916, 714);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(34, 15);
+            this.gunaLabel5.Size = new System.Drawing.Size(33, 15);
             this.gunaLabel5.TabIndex = 38;
             this.gunaLabel5.Text = "Total";
             // 
@@ -375,7 +375,7 @@
             this.gunaLabel7.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel7.Location = new System.Drawing.Point(1207, 681);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel7.Size = new System.Drawing.Size(29, 15);
             this.gunaLabel7.TabIndex = 36;
             this.gunaLabel7.Text = "16%";
             // 
@@ -537,7 +537,7 @@
             this.gunaLabel9.ForeColor = System.Drawing.Color.Navy;
             this.gunaLabel9.Location = new System.Drawing.Point(1208, 645);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(31, 15);
+            this.gunaLabel9.Size = new System.Drawing.Size(29, 15);
             this.gunaLabel9.TabIndex = 44;
             this.gunaLabel9.Text = "10%";
             // 
@@ -558,17 +558,16 @@
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
             this.guna2ComboBox1.Size = new System.Drawing.Size(584, 31);
-            this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 45;
             this.guna2ComboBox1.SelectionChangeCommitted += new System.EventHandler(this.guna2ComboBox1_SelectionChangeCommited);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(142, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 20);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 46;
             this.label2.Text = "Kategorite";
             // 

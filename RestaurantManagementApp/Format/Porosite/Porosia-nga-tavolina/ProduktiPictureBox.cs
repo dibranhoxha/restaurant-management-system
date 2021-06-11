@@ -17,6 +17,8 @@ namespace RestaurantManagementApp.Format.Porosite.Porosia_nga_tavolina
 
         public decimal Cmimi { get; set; }
 
+        public string Foto { get; set; }
+
         public CheckState CheckState { get; set; } = CheckState.Unchecked;
 
         public void CheckToggle()
