@@ -28,5 +28,21 @@ namespace RMS.BO
             this.Cmimi = cmimi;
             this.Foto = foto;
         }
+
+        public Produkti(int produktID, string emri, decimal cmimi, string foto)
+        {
+            this.ProduktID = produktID;
+            this.Emri = emri;
+            this.Cmimi = cmimi;
+            this.Foto = foto;
+        }
+        public Produkti(string emri, int kategoriID, decimal cmimi, string foto)
+        {
+            this.Emri = emri;
+            this.KategoriID = kategoriID;
+            this.Cmimi = cmimi;
+            this.Foto = foto;
+        }
+
     }
 }

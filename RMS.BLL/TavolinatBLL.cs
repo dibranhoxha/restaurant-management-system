@@ -24,9 +24,19 @@ namespace RMS.BLL
             tavolinatDAL.InsertTavoline(model);
         }
 
+        public void FshiTavoline(int tavolinaID)
+        {
+            tavolinatDAL.FshiTavoline(tavolinaID);
+        }
+
         public DataTable ShowTavolinat()
         {
             return tavolinatDAL.ShowTavolinat();
+        }
+
+        public List<Tavolina> GetTavolinat()
+        {
+            return tavolinatDAL.GetTavolinat();
         }
 
     }

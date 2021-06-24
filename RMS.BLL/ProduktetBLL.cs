@@ -23,6 +23,11 @@ namespace RMS.BLL
             produktetDAL.InsertProduct(model);
         }
 
+        public void FshiProdukt(String emri)
+        {
+            produktetDAL.FshiProdukt(emri);
+        }
+
         public DataTable ShowProduktet()
         {
             return produktetDAL.ShowProduktet();
@@ -30,6 +35,16 @@ namespace RMS.BLL
         public List<Produkti> KtheProduktet(int kategori)
         {
             return produktetDAL.KtheProduktet(kategori);
+        }
+
+        public List<Produkti> KtheProduktet(string[] nenkategori)
+        {
+            return produktetDAL.KtheProduktet(nenkategori);
+        }
+
+        public List<Produkti> KtheTeGjithaProduktet()
+        {
+            return produktetDAL.KtheTeGjithaProduktet();
         }
     }
 }

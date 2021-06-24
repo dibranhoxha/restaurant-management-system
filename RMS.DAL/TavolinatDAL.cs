@@ -23,10 +23,29 @@ namespace RMS.DAL
 
                 DatabaseConn.command.Parameters.AddWithValue("@Disponueshmeria", model.Disponueshmeria);
                 DatabaseConn.command.Parameters.AddWithValue("@NrKarrikave", model.NrKarrikave);
-                
-                //command.Parameters.AddWithValue("@LUD");
-                //command.Parameters.AddWithValue("@LUN");
-                //command.Parameters.AddWithValue("@LUB");
+                //DatabaseConn.command.Parameters.AddWithValue("@LUD", model.LUD);
+                //DatabaseConn.command.Parameters.AddWithValue("@LUN", model.LUN);
+                //DatabaseConn.command.Parameters.AddWithValue("@LUB", model.LUB);
+
+                DatabaseConn.command.ExecuteNonQuery();
+                DatabaseConn.conn.Close();
+            }
+        }
+
+        public void FshiTavoline(int tavolinaID)
+		{
+            using (DatabaseConn.conn = new SqlConnection(DatabaseConn.connString))
+            {
+                DatabaseConn.conn.Open();
+                DatabaseConn.command = new SqlCommand("usp_FshiTavoline", DatabaseConn.conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                DatabaseConn.command.Parameters.AddWithValue("@TavolinaID", tavolinaID );
+                //DatabaseConn.command.Parameters.AddWithValue("@LUD", model.LUD);
+                //DatabaseConn.command.Parameters.AddWithValue("@LUN", model.LUN);
+                //DatabaseConn.command.Parameters.AddWithValue("@LUB", model.LUB);
 
                 DatabaseConn.command.ExecuteNonQuery();
                 DatabaseConn.conn.Close();
@@ -45,6 +64,27 @@ namespace RMS.DAL
 
                 DatabaseConn.conn.Close();
                 return dataTable;
+            }
+        }
+
+        public List<Tavolina> GetTavolinat()
+        {
+            using (DatabaseConn.conn = new SqlConnection(DatabaseConn.connString))
+            {
+                DatabaseConn.conn.Open();
+                DatabaseConn.dataAdapter = new SqlDataAdapter("usp_GetTavolinat", DatabaseConn.conn);
+                DataTable dataTable = new DataTable();
+                List<Tavolina> tavolinat = new List<Tavolina>();
+                DatabaseConn.dataAdapter.Fill(dataTable);
+                IEnumerable<DataRow> tavolinat_dbrows = dataTable.AsEnumerable();
+                foreach (DataRow row in tavolinat_dbrows)
+                {
+                    Tavolina tavolina = new Tavolina(Convert.ToInt32(row["TavolinaID"].ToString()), Convert.ToInt32(row["Disponueshmeria"].ToString()), Convert.ToInt32(row["NrKarrikave"]));
+                    tavolinat.Add(tavolina);
+                }
+
+                DatabaseConn.conn.Close();
+                return tavolinat;
             }
         }
     }

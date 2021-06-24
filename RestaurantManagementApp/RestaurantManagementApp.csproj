@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\..\..\..\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 2.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\RMS_git\RMS\Restaurant_management_system\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\..\..\..\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 2.0\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\RMS_git\RMS\Restaurant_management_system\bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="MetroSet UI, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroSet_UI.2.0.0\lib\net45\MetroSet UI.dll</HintPath>
@@ -103,6 +103,12 @@
     <Compile Include="Format\Porosite\Porosia.Designer.cs">
       <DependentUpon>Porosia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Format\Porosite\PorosiaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Format\Porosite\PorosiaForm.Designer.cs">
+      <DependentUpon>PorosiaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Format\Porosite\ProduktetPerPorosi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,18 @@
     <Compile Include="Statistikat.Designer.cs">
       <DependentUpon>Statistikat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserKontrollat\RezervimiUserKontroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserKontrollat\RezervimiUserKontroll.Designer.cs">
+      <DependentUpon>RezervimiUserKontroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserKontrollat\TavolinaUserKontroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserKontrollat\TavolinaUserKontroll.Designer.cs">
+      <DependentUpon>TavolinaUserKontroll.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Format\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Format\Porosite\Porosia.resx">
       <DependentUpon>Porosia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Format\Porosite\PorosiaForm.resx">
+      <DependentUpon>PorosiaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Format\Porosite\ProduktetPerPorosi.resx">
       <DependentUpon>ProduktetPerPorosi.cs</DependentUpon>
@@ -194,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistikat.resx">
       <DependentUpon>Statistikat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserKontrollat\RezervimiUserKontroll.resx">
+      <DependentUpon>RezervimiUserKontroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserKontrollat\TavolinaUserKontroll.resx">
+      <DependentUpon>TavolinaUserKontroll.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="MenaxhimiIRestaurantitDataSet.xsc">
       <DependentUpon>MenaxhimiIRestaurantitDataSet.xsd</DependentUpon>
@@ -229,9 +256,14 @@
       <Project>{d46797f8-1ada-42f3-8f6e-ab67220bf568}</Project>
       <Name>RMS.BO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RMS.DAL\RMS.DAL.csproj">
+      <Project>{e882bedc-7c2c-4f46-9142-d7faf9cd85ee}</Project>
+      <Name>RMS.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\2750635_gray-circle-login-user-icon-png-transparent-png.jpg" />
+    <Content Include="Resources\table-6.jpg" />
     <None Include="Resources\visibility.png" />
     <None Include="Resources\usernameTextBox.IconLeft.png" />
     <None Include="Resources\search.png" />
@@ -245,5 +277,6 @@
     <Content Include="Resources\png-clipart-android-computer-icons-android-system-logo-handheld-devices.png" />
     <Content Include="Resources\pngegg.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
